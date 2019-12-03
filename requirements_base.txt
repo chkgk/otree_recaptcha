@@ -1,0 +1,2 @@
+otree==2.5.3
+django-recaptcha==2.0.5
