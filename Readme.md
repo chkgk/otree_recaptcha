@@ -1,4 +1,5 @@
 # ReCaptcha with oTree
+Tested with oTree v2.5.3.
 ## Installation
 - sign up for recaptcha
     - select V2 with otherwise default options 
@@ -22,6 +23,14 @@ EXTENSION_APPS = [
 RECAPTCHA_PUBLIC_KEY = 'MyRecaptchaKey123'
 RECAPTCHA_PRIVATE_KEY = 'MyRecaptchaPrivateKey456'
 ```
+
+- alternatively, use environmental variables (on heroku):
+```python
+# settings.py
+RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
+```
+
 
 - add a dummy field to the player, make sure it may be left blank:
 ```python 
@@ -54,3 +63,6 @@ class Captcha(Page):
     {% formfield player.captcha %}
 {% endblock %}
 ```
+
+## Acknowledgements
+This is heavily based on [Philipp Chapkovski's](https://github.com/chapkovski) [answer](https://groups.google.com/d/msg/otree/69qEkthJYL8/KLcpXVIXAQAJ) on the oTree Google group. I made some adjustments to make it work with oTree 2.5.3.

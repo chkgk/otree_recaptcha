@@ -41,8 +41,8 @@ SECRET_KEY = '1pe7)0fc^4*%06fn8emy+9tnbg6+uw&j16k3!rg3a)4b3)1v)5'
 INSTALLED_APPS = ['otree']
 
 # for recaptcha
-RECAPTCHA_PUBLIC_KEY = 'MyRecaptchaKey123'
-RECAPTCHA_PRIVATE_KEY = 'MyRecaptchaPrivateKey456'
+RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
 
 EXTENSION_APPS = [
     'captcha',
