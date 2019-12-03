@@ -1,5 +1,8 @@
 # ReCaptcha with oTree
+## Demo
+Head over to heroku for a [live demo](https://recap-demo.herokuapp.com).
 Tested with oTree v2.5.3.
+
 ## Installation
 - sign up for recaptcha
     - select V2 with otherwise default options 
