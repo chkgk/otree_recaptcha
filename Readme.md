@@ -4,7 +4,7 @@ Head over to heroku for a [live demo](https://recap-demo.herokuapp.com).
 Tested with oTree v2.5.3.
 
 ## Installation
-- sign up for recaptcha
+- sign up for [reCAPTCHA](https://www.google.com/recaptcha/)
     - select V2 with otherwise default options 
     - make sure to add ```herokuapp.com``` as the domain if you intend to use it on Amazon Mechanical Turk.
     - for development, also add ```localhost```
