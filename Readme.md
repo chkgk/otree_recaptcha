@@ -30,8 +30,8 @@ RECAPTCHA_PRIVATE_KEY = 'MyRecaptchaPrivateKey456'
 - alternatively, use environmental variables (on heroku):
 ```python
 # settings.py
-RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
-RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
+RECAPTCHA_PUBLIC_KEY = environ.get('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = environ.get('RECAPTCHA_PRIVATE_KEY')
 ```
 
 
