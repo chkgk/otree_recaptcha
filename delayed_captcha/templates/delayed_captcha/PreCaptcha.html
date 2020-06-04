@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Instructions (without captcha)
+{% endblock %}
+
+{% block content %}
+
+    <p>If this page is not completed within 30s, a captcha page is shown which includes the same instructions.</p>
+    <p>Hiding the timer is easy. I've made preparations in the code.</p>
+
+    {% include 'delayed_captcha/Instructions.html' %}
+
+    {% next_button %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        if(js_vars['hide_timer']) {
+            $('.otree-timer').hide();
+        }
+    </script>
+{% endblock %}

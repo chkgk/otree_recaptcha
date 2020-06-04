@@ -16,6 +16,12 @@ SESSION_CONFIGS = [
         num_demo_participants=2,
         app_sequence=['recap']
     ),
+    dict(
+        name='delayed_recap',
+        display_name="Delayed ReCaptcha Demo",
+        num_demo_participants=2,
+        app_sequence=['delayed_captcha']
+    ),
 ]
 
 
@@ -41,8 +47,8 @@ SECRET_KEY = '1pe7)0fc^4*%06fn8emy+9tnbg6+uw&j16k3!rg3a)4b3)1v)5'
 INSTALLED_APPS = ['otree']
 
 # for recaptcha
-RECAPTCHA_PUBLIC_KEY = environ.get('RECAPTCHA_PUBLIC_KEY')
-RECAPTCHA_PRIVATE_KEY = environ.get('RECAPTCHA_PRIVATE_KEY')
+RECAPTCHA_PUBLIC_KEY = environ.get('RECAPTCHA_PUBLIC_KEY', '')
+RECAPTCHA_PRIVATE_KEY = environ.get('RECAPTCHA_PRIVATE_KEY', '')
 
 EXTENSION_APPS = [
     'captcha',

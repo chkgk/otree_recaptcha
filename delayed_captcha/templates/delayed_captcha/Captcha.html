@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Instructions (with captcha)
+{% endblock %}
+
+{% block content %}
+
+    <p>30s have passed. Now a page including a captcha is shown.</p>
+
+    {% include 'delayed_captcha/Instructions.html' %}
+
+    {% formfield player.captcha %}
+
+    {% next_button %}
+
+{% endblock %}

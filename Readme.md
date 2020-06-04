@@ -3,10 +3,12 @@
 Head over to heroku for a [live demo](https://recap-demo.herokuapp.com).
 Tested with oTree v2.5.3.
 
+There is also an example app that demonstrates how the captcha can be shown after a certain time has passed.
+
 ## Installation
 - sign up for [reCAPTCHA](https://www.google.com/recaptcha/)
     - select V2 with otherwise default options 
-    - make sure to add ```herokuapp.com``` as the domain if you intend to use it on Amazon Mechanical Turk.
+    - make sure to add ```herokuapp.com``` as the domain if you intend to use it with Heroku as your hosting provider.
     - for development, also add ```localhost```
 - add ```django-recaptcha``` to the requirements_base.txt
 - install: ```pip install -r requirements.txt```
@@ -30,8 +32,8 @@ RECAPTCHA_PRIVATE_KEY = 'MyRecaptchaPrivateKey456'
 - alternatively, use environmental variables (on heroku):
 ```python
 # settings.py
-RECAPTCHA_PUBLIC_KEY = environ.get('RECAPTCHA_PUBLIC_KEY')
-RECAPTCHA_PRIVATE_KEY = environ.get('RECAPTCHA_PRIVATE_KEY')
+RECAPTCHA_PUBLIC_KEY = environ.get('RECAPTCHA_PUBLIC_KEY', '')
+RECAPTCHA_PRIVATE_KEY = environ.get('RECAPTCHA_PRIVATE_KEY', '')
 ```
 
 
